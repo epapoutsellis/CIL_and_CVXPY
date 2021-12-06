@@ -15,7 +15,7 @@ This repository contains several scipts that compare the solution of different i
 <img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
 
 ```math
-SE = \frac{\sigma}{\sqrt{n}}
+$SE = \frac{\sigma}{\sqrt{n}}$
 ```
 
 
