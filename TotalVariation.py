@@ -7,9 +7,7 @@ import numpy
 # Load Data and resize
 data = dataexample.CAMERA.get(size=(32, 32))
 
-# set up TV denoising 
-
-# unknown  
+# solution
 u_cvx = Variable(data.shape)
 
 # regularisation parameter

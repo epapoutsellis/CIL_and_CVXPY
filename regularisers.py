@@ -2,7 +2,6 @@ from  SparseMat_GradientOperator import SparseMat_GradientOperator
 from cvxpy import *
 
 
-
 def tv(u, isotropic=True, direction = "forward", boundaries = "Neumann"):
         
     G = SparseMat_GradientOperator(u.shape, direction = direction, order = 1, boundaries = boundaries)        
@@ -12,6 +11,20 @@ def tv(u, isotropic=True, direction = "forward", boundaries = "Neumann"):
         return sum(norm(vstack([DX * vec(u), DY * vec(u)]), 2, axis = 0))
     else:
         return sum(norm(vstack([DX * vec(u), DY * vec(u)]), 1, axis = 0))
+
+def tgv(u, w1, w2, alpha0, alpha1, boundaries = "Neumann"):
+
+    G1 = SparseMat_GradientOperator(u.shape, direction = 'forward', order = 1, boundaries = boundaries)  
+    DX, DY = G1[1], G1[0]
+
+    G2 = SparseMat_GradientOperator(u.shape, direction = 'backward', order = 1, boundaries = boundaries) 
+    divX, divY = G2[1], G2[0]
+  
+    return alpha0 * sum(norm(vstack([DX * vec(u) - vec(w1), DY * vec(u) - vec(w2)]), 2, axis = 0)) + \
+           alpha1 * sum(norm(vstack([ divX * vec(w1), divY * vec(w2), \
+                                      0.5 * ( divX * vec(w2) + divY * vec(w1) ), \
+                                      0.5 * ( divX * vec(w2) + divY * vec(w1) ) ]), 2, axis = 0  ) )
+       
 
 def dtv(u, reference, eta, isotropic=True, direction = "forward", boundaries = "Neumann"):
         
