@@ -1,6 +1,7 @@
 # CIL vs CVXPY
 
-This repository contains several scipts that compare the solution of different imaging minimisation problems using the [Core Imaging Library (CIL)](https://github.com/TomographicImaging/CIL) and [cvxpy](https://github.com/cvxpy/cvxpy). All the cvxpy scripts are initially implemented in Matlab for [1](https://link.springer.com/article/10.1007%2Fs10851-015-0624-6) and [2](https://link.springer.com/chapter/10.1007/978-3-319-55795-3_15)
+This repository contains several scipts that compare the solution of different imaging minimisation problems using the [Core Imaging Library (CIL)](https://github.com/TomographicImaging/CIL) and [cvxpy](https://github.com/cvxpy/cvxpy). All the cvxpy scripts are initially implemented in Matlab for [[1]](#1) and [[2]](#2).
+    
 
 ## Imaging Problems
 
@@ -14,11 +15,13 @@ This repository contains several scipts that compare the solution of different i
 
 ## References
 
-[1] Infimal Convolution Regularisation Functionals of BV and L^p Spaces. Part I: The finite p case
+<a id="1">[1]</a> 
+[1] [Infimal Convolution Regularisation Functionals of BV and L^p Spaces. Part I: The finite p case](https://link.springer.com/article/10.1007%2Fs10851-015-0624-6)
 Burger, Martin, Papafitsoros, Konstantinos, Papoutsellis, E, and Schönlieb, Carola-Bibiane
 Journal of Mathematical Imaging and Vision 2016
 
-[2] Infimal Convolution Regularisation Functionals of BV and L^p Spaces. The Case p=∞
+<a id="2">[2]</a> 
+[2] [Infimal Convolution Regularisation Functionals of BV and L^p Spaces. The Case p=∞](https://link.springer.com/chapter/10.1007/978-3-319-55795-3_15)
 Burger, Martin, Papafitsoros, Konstantinos, Papoutsellis, E, and Schönlieb, Carola-Bibiane
 In System Modeling and Optimization 2016
 
