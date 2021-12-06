@@ -7,9 +7,9 @@ This repository contains several scipts that compare the solution of different i
 
 ## Imaging Problems
 
-- [Total Variation Denoising](https://github.com/epapoutsellis/CIL_and_CVXPY/blob/main/TotalVariation.py)
-- [Total Generalised Variation Denoising](https://github.com/epapoutsellis/CIL_and_CVXPY/blob/main/TotalGeneralisedVariation.py)
-- [Directional Total Variation Denoising](https://github.com/epapoutsellis/CIL_and_CVXPY/blob/main/Directional_TotalVariation.py)
+- [Total Variation Denoising](https://github.com/epapoutsellis/CIL_and_CVXPY/blob/main/TotalVariation.ipynb)
+- [Total Generalised Variation Denoising](https://github.com/epapoutsellis/CIL_and_CVXPY/blob/main/TotalGeneralisedVariation.ipynb)
+- [Directional Total Variation Denoising](https://github.com/epapoutsellis/CIL_and_CVXPY/blob/main/Directional_TotalVariation.ipynb)
 
 ## Note
 
