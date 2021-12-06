@@ -16,7 +16,7 @@ This repository contains several scipts that compare the solution of different i
 ## References
 
 <a id="1">[1]</a> 
-[Infimal Convolution Regularisation Functionals of BV and L^p Spaces. Part I: The finite p case](https://link.springer.com/article/10.1007%2Fs10851-015-0624-6)
+[_Infimal Convolution Regularisation Functionals of BV and L^p Spaces. Part I: The finite p case._](https://link.springer.com/article/10.1007%2Fs10851-015-0624-6)
 Burger, Martin, Papafitsoros, Konstantinos, Papoutsellis, E, and Schönlieb, Carola-Bibiane
 Journal of Mathematical Imaging and Vision 2016
 
