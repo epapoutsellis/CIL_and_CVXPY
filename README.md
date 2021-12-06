@@ -1,5 +1,7 @@
 # CIL vs CVXPY
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/epapoutsellis/CIL_and_CVXPY/main)
+
 This repository contains several scipts that compare the solution of different imaging minimisation problems using the [Core Imaging Library (CIL)](https://github.com/TomographicImaging/CIL) and [cvxpy](https://github.com/cvxpy/cvxpy). All the cvxpy scripts are initially implemented in Matlab for [[1]](#1) and [[2]](#2).
     
 
