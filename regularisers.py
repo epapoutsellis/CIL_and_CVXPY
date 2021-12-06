@@ -32,8 +32,8 @@ def dtv(u, reference, eta, isotropic=True, direction = "forward", boundaries = "
     DX, DY = G[1], G[0]
     
     # gradient for reference image
-    tmp_xi_x = DX*vec(reference.array)
-    tmp_xi_y = DY*vec(reference.array)    
+    tmp_xi_x = DX@vec(reference.array)
+    tmp_xi_y = DY@vec(reference.array)    
     denom = sqrt(tmp_xi_x**2 + tmp_xi_y**2 + eta**2)
 
     # compute field xi
