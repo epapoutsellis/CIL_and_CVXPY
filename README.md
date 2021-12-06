@@ -10,13 +10,16 @@ This repository contains several scipts that compare the solution of different i
 
 ## Note
 
-- In the cvxpy implementation, the Split Conic Solver is used by default
+- For the cvxpy implementation, the [Splitting Conic Solver](https://github.com/cvxgrp/scs) is used by default. Another option is to use the [MOSEK](https://www.cvxpy.org/tutorial/advanced/index.html) solver but requires a licence. Institutional Academic License is free.
 
-<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
-
-```math
-$SE = \frac{\sigma}{\sqrt{n}}$
-```
-
-
+$$\begin{equation}
+u^{*} =\underset{u}{\operatorname{argmin}} \frac{1}{2} \| \mathcal{A} u - g\|^{2} +
+\underbrace{
+\begin{cases}
+\alpha\,\|u\|_{1}, & \\[10pt]
+\alpha\,\|\nabla u\|_{2}^{2}, & \\[10pt]
+\alpha\,\mathrm{TV}(u) + \mathbb{I}_{\{u\geq 0\}}(u).
+\end{cases}}_{Regularisers}
+\tag{1}
+\end{equation}$$
 
