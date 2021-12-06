@@ -1,3 +1,4 @@
+#%%
 from cil.optimisation.operators import GradientOperator, SymmetrisedGradientOperator, IdentityOperator, ZeroOperator, BlockOperator
 from cil.optimisation.functions import MixedL21Norm, BlockFunction, L2NormSquared, ZeroFunction
 from cil.optimisation.algorithms import PDHG
@@ -5,7 +6,10 @@ from cil.utilities import dataexample
 from cvxpy import *
 from regularisers import tgv
 import numpy as np
+import matplotlib.pyplot as plt
+from cil.utilities.display import show2D
 
+#%%
 # Load Data and resize
 data = dataexample.CAMERA.get(size=(32, 32))
 
@@ -29,6 +33,7 @@ prob = Problem(obj, constraints = [])
 # Choose solver ( SCS, MOSEK(license needed) )
 tv_cvxpy = prob.solve(verbose = True, solver = SCS)
 
+#%%
 # setup TGV denoising using CIL and the PDHG algorithm
 ig = data.geometry
 
@@ -54,6 +59,22 @@ pdhg_tgv.run(verbose = 2)
 
 # compare solution
 np.testing.assert_almost_equal(pdhg_tgv.solution[0].array, u_cvx.value, decimal=3)
+
+#%%
+# print objectives
+print("CVX objective = {}".format(obj.value))
+print("CIL objective = {}".format(pdhg_tgv.objective[-1]))
+
+# show middle line profiles
+N, M = data.shape
+plt.figure()
+plt.plot(pdhg_tgv.solution[0].array[int(N/2)], label="CIL")
+plt.plot(u_cvx.value[int(N/2)], label="CVXpy")
+plt.legend()
+plt.show()
+
+show2D([pdhg_tgv.solution[0].array, u_cvx.value, np.abs(pdhg_tgv.solution[0].array - u_cvx.value)], num_cols = 3, origin="upper")
+
 
 
 
