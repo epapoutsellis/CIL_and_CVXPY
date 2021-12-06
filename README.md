@@ -11,7 +11,7 @@ This repository contains several scipts that compare the solution of different i
 
 ## Note
 
-- For the cvxpy implementation, the [Splitting Conic Solver](https://github.com/cvxgrp/scs) is used by default. Another option is to use the [MOSEK](https://www.cvxpy.org/tutorial/advanced/index.html) solver but requires a licence. Institutional Academic License is free.
+- For the cvxpy implementation, the [Splitting Conic Solver (SCS)](https://github.com/cvxgrp/scs) is used by default. Another option is to use the [MOSEK](https://www.cvxpy.org/tutorial/advanced/index.html) solver but it requires a licence. Institutional Academic License is free.
 
 ## References
 
