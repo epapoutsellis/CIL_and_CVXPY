@@ -10,6 +10,8 @@ This repository contains several scipts that compare the solution of different i
 - [Total Variation Denoising](https://github.com/epapoutsellis/CIL_and_CVXPY/blob/main/TotalVariation.ipynb)
 - [Total Generalised Variation Denoising](https://github.com/epapoutsellis/CIL_and_CVXPY/blob/main/TotalGeneralisedVariation.ipynb)
 - [Directional Total Variation Denoising](https://github.com/epapoutsellis/CIL_and_CVXPY/blob/main/Directional_TotalVariation.ipynb)
+- [Total Variation Tomography Reconstruction](https://github.com/epapoutsellis/CIL_and_CVXPY/blob/main/TomographyReconstruction.ipynb)
+
 
 ## Note
 
